@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('contatos', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->string('telefone');
-            $table->string('origem');
-            $table->text('observacoes');
+            $table->string('nome')->nullable();
+            $table->string('telefone')->nullable();
+            $table->string('origem')->nullable();
+            $table->string('observacoes')->nullable();
             $table->timestamps();
         });
     }
