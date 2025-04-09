@@ -35,9 +35,9 @@
       <div class="mb-3">
         <label for="origem" class="form-label">Origem</label>
         <select class="form-select" id="origem" name="origem" required>
-          <option value="fixo">Telefone Fixo</option>
-          <option value="celular">Celular</option>
-          <option value="whatsapp">WhatsApp</option>
+          <option value="Fixo">Telefone Fixo</option>
+          <option value="Celular">Celular</option>
+          <option value="Whatsapp">WhatsApp</option>
         </select>
       </div>
       <div class="mb-3">
