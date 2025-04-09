@@ -38,7 +38,6 @@
             <label for="observacoes" class="form-label">Observações</label>
             <textarea class="form-control" id="observacoes" name="observacoes" rows="3" required disabled>{{ $contato->observacoes }}</textarea>
             </div>
-            <button type="submit" class="btn btn-primary" disabled>Enviar</button>
         </form>
     </div>
 
