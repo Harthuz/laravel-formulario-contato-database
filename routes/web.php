@@ -12,9 +12,9 @@ Route::post('/cadastrar-contato',function(Request $request){
     //dd($request->all());
     Contato::create([
         'nome' => $request->nome,
-        'email' => $request->email,
         'telefone' => $request->telefone,
-        'mensagem' => $request->mensagem,
+        'origem' => $request->origem,
+        'observacoes' => $request->observacoes,
     ]);
     echo "Contato criado com sucesso!";
 });
