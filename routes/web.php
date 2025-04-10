@@ -33,4 +33,14 @@ Route::get('/editar-contato/{id}', function ($id) {
     }
     return view('editar-contato', ['contato' => $contato]);
 });
+
+Route::post('/editar-contato/{id}', function (Request $request, $id) {
+    $contato = Contato::find($id);
+    $contato->update([
+        'nome' => $request->nome,
+        'telefone' => $request->telefone,
+        'origem' => $request->origem,
+        'observacoes' => $request->observacoes,
+    ]);
+    echo "Contato editado com sucesso!";
 });
