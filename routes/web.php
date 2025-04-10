@@ -44,3 +44,13 @@ Route::post('/editar-contato/{id}', function (Request $request, $id) {
     ]);
     echo "Contato editado com sucesso!";
 });
+
+Route::get('/deletar-contato/{id}', function ($id) {
+    $contato = Contato::find($id);
+    if ($contato) {
+        $contato->delete();
+        echo "Contato deletado com sucesso!";
+    } else {
+        echo "Contato não encontrado!";
+    }
+});
