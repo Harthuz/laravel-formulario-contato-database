@@ -24,4 +24,13 @@ Route::get('/listar-contato/{id}', function ($id) {
     return view('listar-contato', ['contato' => $contato]);
 });
 
+Route::get('/editar-contato/{id}', function ($id) {
+    $contato = Contato::find($id);
+    if ($contato) {
+        \Log::info("Contato encontrado: ", $contato->toArray()); // Log dos dados do contato
+    } else {
+        \Log::warning("Contato com ID {$id} não encontrado."); // Log caso o contato não seja encontrado
+    }
+    return view('editar-contato', ['contato' => $contato]);
+});
 });
