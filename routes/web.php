@@ -19,7 +19,9 @@ Route::post('/cadastrar-contato',function(Request $request){
     echo "Contato criado com sucesso!";
 });
 
-Route::get('/listar-contatos/{id}', function ($id) {
-    $contatos = Contato::find($id);
-    return view('listar-contatos', ['contato' => $contatos]);
+Route::get('/listar-contato/{id}', function ($id) {
+    $contato = Contato::find($id);
+    return view('listar-contato', ['contato' => $contato]);
+});
+
 });
